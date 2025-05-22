@@ -20,7 +20,6 @@ function App() {
   const handleSearch = (query) => {
     setSearchQuery(query);
     setPage(1);
-    console.log("Search query:", query);
   };
 
   const handleLoadMore = () => {
@@ -40,13 +39,11 @@ function App() {
         setIsLoading(true);
         setError("");
         const data = await fetchImages(searchQuery, page);
-        console.log("Fetched images:", data.results);
         setImages((prev) =>
           page === 1 ? data.results : [...prev, ...data.results]
         );
-      } catch (error) {
+      } catch {
         setError("Something went wrong. Please try again later.");
-        console.error("Error fetching images:", error);
       } finally {
         setIsLoading(false);
       }
