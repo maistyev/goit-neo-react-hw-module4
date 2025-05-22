@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import SearchBar from "./Components/SearchBar/SearchBar";
+import SearchBar from "./components/SearchBar/SearchBar";
 import { fetchImages } from "./api/images-api";
-import ImageGallery from "./Components/ImageGallery/ImageGallery";
+import ImageGallery from "./components/ImageGallery/ImageGallery";
 import { PropagateLoader } from "react-spinners";
-import LoadMoreButton from "./Components/LoadMoreBtn/LoadMoreBtn";
+import LoadMoreButton from "./components/LoadMoreBtn/LoadMoreBtn";
 import { Toaster } from "react-hot-toast";
-import ImageModal from "./Components/ImageModal/ImageModal";
+import ImageModal from "./components/ImageModal/ImageModal";
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
